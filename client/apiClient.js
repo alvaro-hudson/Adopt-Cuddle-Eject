@@ -13,6 +13,6 @@ export function getRandomDog() {
     .get('https://dog.ceo/api/breeds/image/random')
     .then(res => {
       console.log(res.body)
-      return res.body
+      return res.body.message
   })
 }
