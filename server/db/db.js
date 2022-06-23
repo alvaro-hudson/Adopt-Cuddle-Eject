@@ -7,9 +7,9 @@ function getAll(db = connection) {
   .select()
 }
 
-function addOne(newEntry ,db = connection) {
+function addOne(newUser ,db = connection) {
   return db('table')
-  .insert(newEntry)
+  .insert(newUser)
 }
 
 function getOne(id, db = connection) {
