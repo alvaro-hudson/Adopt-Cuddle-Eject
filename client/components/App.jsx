@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { getRandomDog } from '../apiClient'
+import Form from './Form'
 
 function App() {
 
@@ -19,8 +20,23 @@ function App() {
       <button onClick={clickHandler}>Get Dog</button>
       <div>
         <img src={dogImage} />
-        <p>{setDogImage}</p>
       </div>
+      <div>
+        <Form />
+      </div>
+      <div>
+        <img src={dogImage} />
+      </div>
+      <div>
+        <Form />
+      </div>
+      <div>
+        <img src={dogImage} />
+      </div>
+      <div>
+        <Form />
+      </div>
+        
       
     </>
 )
