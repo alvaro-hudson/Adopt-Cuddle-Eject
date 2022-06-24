@@ -64,13 +64,13 @@ function App() {
         <img src={dogImage2} />
       </div>
       <div>
-        <Form func={dogFormStuff} image='Dog 2' />
+        <Form func={dogFormStuff} image={dogImage2} />
       </div>
       <div>
         <img src={dogImage3} />
       </div>
       <div>
-        <Form func={dogFormStuff} image='Dog 3' />
+        <Form func={dogFormStuff} image={dogImage3} />
       </div>
       <button onClick={dogSubmit}>Submit</button>
       
