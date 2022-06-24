@@ -52,8 +52,12 @@ function App() {
 
   return (
     <>
-      <h1>Dogs!</h1>
-      <button onClick={clickHandler}>Get Dog</button>
+    <div className='color'> 
+      <h1>Welcome to Adopt, Cuddle, Eject!</h1>
+      <h3>Take your pick! And remember, only 1 dog per choice!</h3>
+      </div>
+     
+      <button onClick={clickHandler} >Get Dog</button>
       <div>
         <img src={dogImage} />
       </div>
@@ -72,7 +76,7 @@ function App() {
       <div>
         <Form func={dogFormStuff} image='Dog 3' />
       </div>
-      <button onClick={dogSubmit}>Submit</button>
+      <button onClick={dogSubmit} >Submit</button>
       
     </>
   )

@@ -17,16 +17,21 @@ function Form(props) {
 
   return (
     <>
+    <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor='dogs'>Choose a dog!</label>
+    
+        <label htmlFor='dogs'className='font'>Choose a dog!</label>
         <select type="text" id="dogs" name='adopt' onChange={handleChange}>
+          
           <option value=''>Please Choose</option>
           <option value='adopt'>Adopt</option>
           <option value='cuddle'>Cuddle</option>
           <option value='eject'>Eject</option>
+          
         </select> 
         
     </form>
+    </div>
     </>
 
 
