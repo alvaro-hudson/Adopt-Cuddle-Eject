@@ -5,7 +5,7 @@ function Form(props) {
 
 
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => {r
     e.preventDefault()
     console.log(formData)
   }
@@ -27,9 +27,7 @@ function Form(props) {
           <option value='adopt'>Adopt</option>
           <option value='cuddle'>Cuddle</option>
           <option value='eject'>Eject</option>
-          
-        </select> 
-        
+        </select>     
     </form>
     </div>
     </>

@@ -4,7 +4,6 @@ const connection = require('knex')(config)
 
 function getAll(db = connection) {
   return db('table')
-  .select()
 }
 
 function addOne(newUser ,db = connection) {

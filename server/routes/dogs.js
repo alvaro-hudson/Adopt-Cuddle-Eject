@@ -16,11 +16,14 @@ db.getAll()
 
 router.post('/', (req, res) => {
   const newUser = req.body
+  console.log('newUser',newUser)
   db.addOne(newUser)
     .then(idArr => {
       const id = idArr[0]
+      console.log('id', id)
       db.getOne(id)
         .then(user => {
+          console.log('user', user)
           res.json(user)
         })
       .catch(err => {
