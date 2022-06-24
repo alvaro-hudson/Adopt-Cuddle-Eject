@@ -1,34 +1,31 @@
 import React, { useState, useEffect } from 'react'
 
 
-function Form() {
+function Form(props) {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    adopt: '',
-    cuddle: '',
-    eject: '',
-  })
+
   
   const handleSubmit = (e) => {
     e.preventDefault()
+    console.log(formData)
   }
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+    props.func(e.target.value, props.image)
+    console.log(e.target.value, props.image)
   }
 
   return (
     <>
-      <form>
-        <select>
-          <option value='option1'>Adopt</option>
-          <option value='option2'>Cuddle</option>
-          <option value='option3'>Eject</option>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor='dogs'>Choose a dog!</label>
+        <select type="text" id="dogs" name='adopt' onChange={handleChange}>
+          <option value=''>Please Choose</option>
+          <option value='adopt'>Adopt</option>
+          <option value='cuddle'>Cuddle</option>
+          <option value='eject'>Eject</option>
         </select> 
+        
     </form>
     </>
 
