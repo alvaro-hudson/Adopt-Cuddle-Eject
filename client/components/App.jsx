@@ -44,7 +44,7 @@ function App() {
     })
   }
 
-  const dogSubmit = (formData) => {
+  const dogSubmit = () => {
     console.log('dogSubmit function', formData)
     postRandomDog(formData)
   }
