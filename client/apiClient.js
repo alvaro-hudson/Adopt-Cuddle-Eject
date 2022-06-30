@@ -46,6 +46,14 @@ export function getRandomDog3() {
 })
 }
 
+export function getAllDogs() {
+  return request
+    .get('/api/v1/dogs')
+      .then(res => {
+        return res.body
+      })
+}
+
 export function postRandomDog(dogForm) {
 
   return request

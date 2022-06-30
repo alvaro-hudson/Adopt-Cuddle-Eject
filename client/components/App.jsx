@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 
 import { getRandomDog, getRandomDog2, getRandomDog3, postRandomDog } from '../apiClient'
 import Form from './Form'
+import ViewDogs from './ViewDogs'
 
 function App() {
 
   const [dogImage, setDogImage] = useState('')
   const [dogImage2, setDogImage2] = useState('')
   const [dogImage3, setDogImage3] = useState('')
+  const [user, setUsers] = useState(false)
   
   
   const clickHandler = () => {
@@ -49,6 +51,16 @@ function App() {
     postRandomDog(formData)
   }
 
+  const nameChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value 
+    })
+  }
+
+  const handleClick = (e) => {
+    setUsers(true)
+  }
 
   return (
     <>
@@ -58,6 +70,8 @@ function App() {
       </div>
      
       <button onClick={clickHandler} >Get Dog</button>
+      <label htmlFor="name">Name</label>
+      <input type="text" id="name" name="name" onChange={nameChange} />
       <div>
         <img src={dogImage} />
       </div>
@@ -77,6 +91,10 @@ function App() {
         <Form func={dogFormStuff} image={dogImage3} />
       </div>
       <button onClick={dogSubmit} >Submit</button>
+
+      <button onClick={handleClick}>See other people's choices</button> 
+
+      {user && <ViewDogs/>}
       
     </>
   )
